@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuba</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn-icons-png.flaticon.com/512/197/197508.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="cubastyle.css" />
+  </head>
+  <body>
+    <div id="capa-hero">
+      <h1>Cuba</h1>
+      <p>Música, praias e cultura caribenha</p>
+    </div>
+
+    <script src="cubascript.js"></script>
+
+    <a href="../index.html" class="btn-voltar"> ⬅ Voltar </a>
+
+    <nav id="navbar">
+      <button
+        type="button"
+        onclick="changeTab('historia')"
+        id="btn-historia"
+        class="active"
+      >
+        História
+      </button>
+      <button type="button" onclick="changeTab('cidades')" id="btn-cidades">
+        Cidades
+      </button>
+      <button
+        type="button"
+        onclick="changeTab('turisticos')"
+        id="btn-turisticos"
+      >
+        Pontos turísticos
+      </button>
+      <button type="button" onclick="changeTab('festas')" id="btn-festas">
+        Festas e tradições
+      </button>
+      <button type="button" onclick="changeTab('cardapio')" id="btn-cardapio">
+        Cardápio
+      </button>
+      <button
+        type="button"
+        onclick="changeTab('personalidades')"
+        id="btn-personalidades"
+      >
+        Personalidades
+      </button>
+      <button type="button" onclick="traduzirSite()" id="btn-traduzir">
+        Traduzir
+      </button>
+    </nav>
+
+    <section id="historia" class="active">
+      <h2>História de Cuba</h2>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Colonização Espanhola (1492–1898)',
+            'Em 1492, Cristóvão Colombo chegou à ilha durante as Grandes Navegações. A colonização espanhola desenvolveu uma economia fortemente dependente da produção de açúcar, do cultivo de tabaco e do uso em massa de mão de obra escravizada africana.',
+            'colonizacao.jpg',
+          )
+        "
+      >
+        Em 1492, Cristóvão Colombo chegou à ilha durante as Grandes Navegações.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Lutas pela Independência',
+            'No século XIX, iniciaram-se os movimentos de libertação contra o domínio espanhol, impulsionados por ideais libertários. Cuba conquistou sua independência formal em 1898 após a intervenção dos Estados Unidos na Guerra Hispano-Americana.',
+            'independencia.png',
+          )
+        "
+      >
+        Movimentos de emancipação colonial e a conquista da independência de
+        Cuba.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Ditadura de Fulgencio Batista',
+            'Fulgencio Batista assumiu o poder por meio de um golpe militar em 1952. Seu governo ditatorial ficou marcado por corrupção profunda, violenta repressão política e submissão aos interesses econômicos dos EUA.',
+            'batista.jpg',
+          )
+        "
+      >
+        A ditadura de Fulgencio Batista ficou marcada por corrupção,
+        desigualdade social e forte influência dos EUA.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'A Revolução Cubana',
+            'A oposição ao regime de Batista consolidou-se através do Movimento 26 de Julho. Os guerrilheiros destituíram o ditador, assumindo o poder em 1º de janeiro de 1959.',
+            'revolucao.jpg',
+          )
+        "
+      >
+        A Revolução Cubana derrubou o antigo regime e transformou a estrutura
+        social do país.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Implantação do Socialismo',
+            'Após a vitória revolucionária, Cuba realizou amplas reformas agrárias e nacionalizou propriedades. O governo adotou o sistema socialista e aproximou-se da União Soviética, sofrendo com o embargo comercial dos EUA.',
+            'socialismo.jpg',
+          )
+        "
+      >
+        Após 1959, Cuba implantou o socialismo e aproximou-se da União
+        Soviética.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'A Crise dos Mísseis (1962)',
+            'Cuba esteve no centro do momento mais tenso da Guerra Fria quando a União Soviética instalou mísseis nucleares em seu território, quase resultando em um conflito nuclear entre as superpotências.',
+            'crise.png',
+          )
+        "
+      >
+        A Crise dos Mísseis de 1962 colocou Cuba no centro da Guerra Fria.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'O Período Especial',
+            'Com a dissolução da União Soviética, Cuba enfrentou uma crise profunda caracterizada por escassez severa de alimentos, falta de combustível e constantes apagões nos anos 90.',
+            'periodo.jpg',
+          )
+        "
+      >
+        Após o fim da URSS, Cuba enfrentou forte crise econômica chamada
+        “Período Especial”.
+      </div>
+
+      <h2>Símbolos Nacionais</h2>
+
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Peso Cubano (CUP) - Moeda de Cuba',
+            'O Peso Cubano (CUP) é a moeda oficial de Cuba. Durante muitos anos o país utilizou dois sistemas monetários, mas atualmente o CUP é a principal moeda em circulação.',
+            'peso-cubano.jpg',
+          )
+        "
+      >
+        Moeda de Cuba: Peso Cubano (CUP)
+      </div>
+
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Bandeira de Cuba',
+            'A bandeira de Cuba foi criada no século XIX durante os movimentos de independência contra a Espanha. Suas listras azuis representam as antigas divisões territoriais da ilha, o triângulo vermelho simboliza liberdade e igualdade, e a estrela branca representa independência e soberania nacional.',
+            'bandeira-cuba.svg',
+          )
+        "
+      >
+        Bandeira de Cuba e sua história
+      </div>
+
+      <h2>Localização</h2>
+      <div class="mapa-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748281.8239088655!2d-80.01258671752391!3d22.2599602525545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d11b3da6f959325%3A0x6d11b3da6f959325!2sCuba!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <section id="cidades">
+      <h2>Principais Cidades</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Havana',
+              'Capital administrativa e maior metrópole de Cuba, mundialmente famosa por seu patrimônio histórico colonial, fortificações e veículos clássicos dos anos 50.',
+              'havana.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/havana.jpg" /></div>
+          <div class="info-bar">Havana</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Santiago de Cuba',
+              'Segunda maior cidade do país, reconhecida como a cidade-berço da Revolução Cubana e um influente polo de ritmos musicais tradicionais.',
+              'santiago.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/santiago.jpg" /></div>
+          <div class="info-bar">Santiago de Cuba</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Varadero',
+              'O principal polo de turismo balneário de Cuba, atrai milhões de visitantes devido às suas praias paradisíacas de águas cristalinas.',
+              'varadero.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/varadero.jpg" /></div>
+          <div class="info-bar">Varadero</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Trinidad',
+              'Patrimônio Mundial pela UNESCO, Trinidad destaca-se como uma das cidades coloniais mais bem preservadas da América Latina, com suas ruas de pedra e casarões coloridos.',
+              'trinidad.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/trinidad.jpg" /></div>
+          <div class="info-bar">Trinidad</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Cienfuegos',
+              'Conhecida como a Pérola do Sul, colonizada por franceses, o que resultou em uma elegante e charmosa arquitetura neoclássica urbana.',
+              'cienfuegos.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/cienfuegos.jpg" /></div>
+          <div class="info-bar">Cienfuegos</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Santa Clara',
+              'Famosa por ter sido o palco da histórica e decisiva Batalha de Santa Clara liderada por Che Guevara, abrigando hoje o seu memorial.',
+              'santaclara.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/santaclara.jpg" /></div>
+          <div class="info-bar">Santa Clara</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Camagüey',
+              'Famosa por seu centro histórico labiríntico e pelos grandes potes de barro (tinajones) que decoram as praças e serviam para armazenar água.',
+              'camaguey.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/camaguey.jpg" /></div>
+          <div class="info-bar">Camagüey</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Holguín',
+              'Conhecida como a Cidade dos Parques devido ao grande número de praças históricas em seu centro urbano.',
+              'holguin.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/holguin.jpg" /></div>
+          <div class="info-bar">Holguín</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="turisticos">
+      <h2>Pontos Turísticos</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Malecón de Havana',
+              'Extensa e imponente avenida litorânea que margeia o norte de Havana, funcionando como ponto de encontro popular de músicos e poetas.',
+              'malecon.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/malecon.jpg" /></div>
+          <div class="info-bar">Malecón de Havana</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Capitólio de Havana',
+              'Edifício monumental inspirado no Capitólio dos EUA e no Panteão de Paris, servindo atualmente como sede governamental.',
+              'capitolio.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/capitolio.jpg" /></div>
+          <div class="info-bar">Capitólio de Havana</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Plaza de la Revolución',
+              'Uma das maiores praças públicas do mundo, famosa pelos murais gigantes em aço de Che Guevara e Camilo Cienfuegos.',
+              'plaza.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/plaza.jpg" /></div>
+          <div class="info-bar">Plaza de la Revolución</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Valle de Viñales',
+              'Paisagem cultural protegida pela UNESCO, célebre pelas formações rochosas calcárias (mogotes) e plantações tradicionais do melhor tabaco cubano.',
+              'vinales.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/vinales.jpg" /></div>
+          <div class="info-bar">Valle de Viñales</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Castillo del Morro',
+              'Imponente fortaleza colonial erguida no século XVII para resguardar a entrada da Baía contra ataques de piratas e corsários.',
+              'castillo.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/castillo.jpg" /></div>
+          <div class="info-bar">Castillo del Morro</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Habana Vieja',
+              'O centro histórico de Havana, repleto de praças coloniais restauradas, fortificações e belos casarões históricos cheios de música viva.',
+              'habanavieja.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/habanavieja.jpg" /></div>
+          <div class="info-bar">Habana Vieja</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Mausoléu de Che Guevara',
+              'Complexo memorial em Santa Clara que abriga os restos mortais do líder revolucionário e uma grande estátua de bronze em sua homenagem.',
+              'mausoleu.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/mausoleu.jpg" /></div>
+          <div class="info-bar">Mausoléu de Che Guevara</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Cayo Coco',
+              'Uma ilha paradisíaca conhecida por suas praias de areia branca coralina, resorts elegantes e colônias de flamingos cor-de-rosa.',
+              'cayococo.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/cayococo.jpg" /></div>
+          <div class="info-bar">Cayo Coco</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="festas">
+      <h2>Festas e Tradições</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Carnaval de Santiago',
+              'A maior e mais vibrante festividade popular cubana, misturando desfiles coreografados, fantasias exuberantes e o ritmo das congas.',
+              'carnaval.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/carnaval.jpg" /></div>
+          <div class="info-bar">Carnaval de Santiago</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'A Santería Cubana',
+              'Prática religiosa sincrética de forte matriz africana originada na ilha, que mescla o catolicismo e as tradições de matriz iorubá.',
+              'santeria.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/santeria.jpg" /></div>
+          <div class="info-bar">Santería Cubana</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Festival del Habano',
+              'Celebração de caráter internacional que reúne anualmente em Havana produtores, especialistas e amantes de charutos cubanos de todo o mundo.',
+              'habano.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/habano.jpg" /></div>
+          <div class="info-bar">Festival del Habano</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Parrandas de Remedios',
+              'Uma das festas folclóricas mais antigas de Cuba, celebrada em dezembro, onde dois bairros competem com luzes e fogos de artifício.',
+              'parrandas.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/parrandas.jpg" /></div>
+          <div class="info-bar">Parrandas de Remedios</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Bailes de Salsa e Son',
+              'Ritmos contagiantes como o son cubano, rumba, mambo e salsa são celebrados fervorosamente no cotidiano da cultura popular.',
+              'youtube:gsKQalDu4VU',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/salsa.jpg" /></div>
+          <div class="info-bar">Bailes de Salsa e Son</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Festival de Jazz de Havana',
+              'Evento internacional de altíssimo prestígio que atrai grandes nomes mundiais e músicos locais focados no jazz latino e fusões caribenhas.',
+              'jazz.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/jazz.jpg" /></div>
+          <div class="info-bar">Festival de Jazz</div>
+        </div>
+      </div>
+
+      <h2>Cinema e Produções Culturais</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Memórias do Subdesenvolvimento',
+              'Analisa as contradições psicológicas de um intelectual burguês na Havana pós-revolucionária. Dirigido por Tomás Gutiérrez Alea.',
+              'memorias.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/memorias.jpg" /></div>
+          <div class="info-bar">Memórias do Subdesenvolvimento</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Buena Vista Social Club',
+              'Aclamado documentário musical que resgatou os grandes mestres da era de ouro da música tradicional de Cuba.',
+              'youtube:tGbRZ73NvlY',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/buenavista.jpg" /></div>
+          <div class="info-bar">Buena Vista Social Club</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cardapio">
+      <h2>Gastronomia Completa</h2>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Ropa Vieja',
+            'O prato mais tradicional cubano. Consiste em carne bovina desfiada cozida lentamente com um aromático molho de tomates, pimentões e temperos.',
+            'ropavieja.jpg',
+          )
+        "
+      >
+        Ropa Vieja
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Arroz Congrí',
+            'Arroz branco e feijão preto temperados e cozidos juntos na mesma panela, absorvendo todos os sabores tradicionais.',
+            'congri.jpg',
+          )
+        "
+      >
+        Arroz Congrí (Moros y Cristianos)
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Lechón Assado',
+            'Clássico de festas. Carne de porco marinada em tempero mojo tradicional e assada lentamente até ficar macia e dourada.',
+            'lechon.jpg',
+          )
+        "
+      >
+        Lechón Assado
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Tostones',
+            'Acompanhamento feito com pedaços de banana-da-terra verde esmagados e fritos duas vezes até dourarem.',
+            'tostones.jpg',
+          )
+        "
+      >
+        Tostones (Chatinos)
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Yuca con Mojo',
+            'Mandioca cozida servida com molho cítrico mojo, feito à base de alho, óleo quente e suco de limão ou laranja azeda.',
+            'yuca.jpg',
+          )
+        "
+      >
+        Yuca con Mojo
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Sanduíche Cubano',
+            'Pão prensado recheado com porco assado, presunto fatiado, queijo suíço derretido, picles e a tradicional mostarda.',
+            'sanduiche.jpg',
+          )
+        "
+      >
+        Sanduíche Cubano
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Mojito',
+            'Coquetel refrescante internacional preparado com rum branco cubano, suco de limão, hortelã e água com gás.',
+            'mojito.jpg',
+          )
+        "
+      >
+        Mojito
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Daiquirí',
+            'Outro coquetel icônico da cultura caribenha, feito à base de rum branco, suco de limão fresco e gelo triturado.',
+            'daiquiri.webp',
+          )
+        "
+      >
+        Daiquirí
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Cuba Libre',
+            'Drinks históricos criados em Havana, combinando de forma simples o rum cubano com refrigerante de cola e limão.',
+            'cubalibre.jpg',
+          )
+        "
+      >
+        Cuba Libre
+      </div>
+    </section>
+
+    <div id="meuModal" class="modal" onclick="closeModal()">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <div class="modal-card" onclick="event.stopPropagation()">
+        <!-- Imagem (padrão) -->
+        <img id="imgModal" src="" />
+
+        <!-- Vídeo local (mp4/webm) -->
+        <video
+          id="videoModal"
+          controls
+          style="display: none; width: 100%; height: 300px; object-fit: cover"
+        >
+          <source id="videoSrcModal" src="" type="video/mp4" />
+        </video>
+
+        <!-- Vídeo YouTube embed -->
+        <iframe
+          id="youtubeModal"
+          src=""
+          style="display: none; width: 100%; height: 300px; border: 0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          allowfullscreen
+        ></iframe>
+
+        <div class="modal-info">
+          <h3 id="tituloModal"></h3>
+          <p id="descModal"></p>
+        </div>
+      </div>
+    </div>
+
+    <section id="personalidades">
+      <h2>Líderes Políticos e Revolucionários</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'José Martí (1853–1895)',
+              'O maior herói político, literário e poeta nacional de Cuba, responsável por formular os principais ideais anti-imperialistas de libertação colonial.',
+              'marti.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/marti.jpg" /></div>
+          <div class="info-bar">José Martí</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Fidel Castro (1926–2016)',
+              'Principal estrategista militar da Revolução de 1959. Governou o país por quase meio século estruturando as bases do Estado socialista.',
+              'fidel.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/fidel.jpg" /></div>
+          <div class="info-bar">Fidel Castro</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Ernesto Che Guevara (1928–1967)',
+              'Médico e comandante influente do exército rebelde. Teve papel crucial nas reformas industriais e tornou-se um ícone político global.',
+              'che.png',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/che.png" /></div>
+          <div class="info-bar">Ernesto Che Guevara</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Camilo Cienfuegos (1932–1959)',
+              'Um dos heróis mais carismáticos e populares da guerrilha revolucionária, conhecido como o Senhor da Vanguarda.',
+              'camilo.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/camilo.jpg" /></div>
+          <div class="info-bar">Camilo Cienfuegos</div>
+        </div>
+      </div>
+
+      <h2>Grandes Nomes da Cultura e Artes</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Celia Cruz (1925–2003)',
+              'Imortalizada mundialmente como a Rainha da Salsa. Influente artista latina lembrada por seu inesquecível e enérgico grito: ¡Azúcar!',
+              'celia.png',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/celia.png" /></div>
+          <div class="info-bar">Celia Cruz</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Alicia Alonso (1920–2019)',
+              'Lenda máxima do balé clássico mundial e prima ballerina assoluta, fundou o prestigiado Balé Nacional de Cuba.',
+              'alicia.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/alicia.jpg" /></div>
+          <div class="info-bar">Alicia Alonso</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Compay Segundo (1907–2003)',
+              'Famoso músico e compositor tradicional de son, mundialmente aclamado ao integrar o projeto musical Buena Vista Social Club.',
+              'compay.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/compay.jpg" /></div>
+          <div class="info-bar">Compay Segundo</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Ana de Armas (1988–presente)',
+              'Atriz cubana de enorme prestígio internacional contemporâneo, indicada ao Oscar de Melhor Atriz por sua atuação em Hollywood.',
+              'ana.webp',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/ana.webp" /></div>
+          <div class="info-bar">Ana de Armas</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <h3>Cuba</h3>
+      <div class="footer-btns">
+        <button type="button" onclick="changeTab('historia')">História</button>
+        <button type="button" onclick="changeTab('cidades')">Cidades</button>
+        <button type="button" onclick="changeTab('turisticos')">
+          Pontos turísticos
+        </button>
+        <button type="button" onclick="changeTab('festas')">
+          Festas e tradições
+        </button>
+        <button type="button" onclick="changeTab('cardapio')">
+          Gastronomia
+        </button>
+        <button type="button" onclick="changeTab('personalidades')">
+          Personalidades
+        </button>
+      </div>
+      <p>
+        © 2026 - ETEC Raposo Tavares Atividade de Espanhol | Desenvolvido por
+        Gabriel Garcia, Thiago Cavalcante, Felipe Rocha, Gabriel Velasquez,
+        Otavio Marconi e Vitor Moraes.
+      </p>
+    </footer>
+  </body>
+</html>
