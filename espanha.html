@@ -1,0 +1,1238 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espanha</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn-icons-png.flaticon.com/512/8603/8603600.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="espanhastyle.css" />
+  </head>
+  <body>
+    <div id="capa-hero">
+      <h1>Espanha</h1>
+      <p>História, cultura e gastronomia em um só lugar</p>
+    </div>
+
+    <script src="espanhascript.js"></script>
+
+    <a href="../index.html" class="btn-voltar"> ⬅ Voltar </a>
+
+    <nav id="navbar">
+      <button
+        type="button"
+        onclick="changeTab('historia')"
+        id="btn-historia"
+        class="active"
+      >
+        História
+      </button>
+      <button type="button" onclick="changeTab('cidades')" id="btn-cidades">
+        Cidades
+      </button>
+      <button
+        type="button"
+        onclick="changeTab('turisticos')"
+        id="btn-turisticos"
+      >
+        Pontos turísticos
+      </button>
+      <button type="button" onclick="changeTab('festas')" id="btn-festas">
+        Festas e tradições
+      </button>
+      <button type="button" onclick="changeTab('cardapio')" id="btn-cardapio">
+        Cardápio
+      </button>
+      <button
+        type="button"
+        onclick="changeTab('personalidades')"
+        id="btn-personalidades"
+      >
+        Personalidades
+      </button>
+      <button type="button" onclick="traduzirSite()" id="btn-traduzir">
+        Traduzir
+      </button>
+    </nav>
+
+    <section id="historia" class="active">
+      <h2>História da Espanha</h2>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Iberos e Celtas',
+            'Os primeiros habitantes da península deixaram um legado de arte e fortificações.',
+            'povosantigos.jfif',
+          )
+        "
+      >
+        Os povos antigos iberos e celtas foram os primeiros habitantes da
+        região.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Império Romano',
+            'Os romanos construíram aquedutos e estradas que ainda podem ser vistos hoje.',
+            'imperioromano.jfif',
+          )
+        "
+      >
+        O Império Romano trouxe desenvolvimento urbano e cultural.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Al-Andalus',
+            'A invasão violenta tomou avanços na ciência e na arquitetura criados pelos povos nativos.',
+            'alandalus.jpg',
+          )
+        "
+      >
+        No domínio muçulmano, surgiu o período de Al-Andalus com avanços
+        científicos.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'A Reconquista',
+            'Em 1492, a unificação da Espanha e a descoberta da América mudaram o mundo.',
+            'unificacaoespanha.jpg',
+          )
+        "
+      >
+        A Reconquista terminou em 1492, junto com a viagem de Colombo.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Potência Mundial',
+            'Durante séculos, a Espanha foi um dos maiores impérios da história.',
+            'imperioespanhol.jpg',
+          )
+        "
+      >
+        A Espanha foi uma grande potência mundial nos séculos XVI e XVII.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Democracia',
+            'Após tempos de guerra, a Espanha é hoje uma democracia moderna e vibrante.',
+            'ditaduraespanhola.jpg',
+          )
+        "
+      >
+        No século XX houve guerra civil e ditadura até a democracia atual.
+      </div>
+      <h2>Símbolos Nacionais</h2>
+
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Euro (€) - Moeda da Espanha',
+            'O Euro foi adotado pela Espanha em 2002, substituindo a peseta, o que fortaleceu sua integração econômica com a União Europeia, facilitando comércio, viagens e trazendo mais estabilidade ao país.',
+            'euro.jpeg',
+          )
+        "
+      >
+        Moeda da Espanha: Euro (€)
+      </div>
+
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Bandeira da Espanha',
+            'A bandeira da Espanha, criada em 1785 no reinado de Carlos III, tem cores escolhidas para facilitar a identificação no mar. Seu brasão representa a união de antigos reinos e simboliza a história, a unidade e a identidade do país.',
+            'espanha.jpg',
+          )
+        "
+      >
+        Bandeira da Espanha e sua história
+      </div>
+
+      <h2>Cultura</h2>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Convivência',
+            'Os espanhóis amam a vida social e as longas conversas após as refeições.',
+            'convivenciasocial.jpg',
+          )
+        "
+      >
+        A cultura espanhola valoriza muito a convivência social, com encontros
+        em praças, bares e refeições longas.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Futebol',
+            'Real Madrid e Barcelona são símbolos globais da paixão espanhola.',
+            'futebol.jpg',
+          )
+        "
+      >
+        O futebol é uma das maiores paixões da Espanha, com clubes mundialmente
+        famosos.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Flamenco',
+            'Uma arte declarada Patrimônio da Humanidade, cheia de emoção.',
+            'flamenco.jpg',
+          )
+        "
+      >
+        O flamenco é uma dança e estilo musical típico, marcado por palmas e
+        violão.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Touradas',
+            'Uma tradição secular que ainda resiste em diversas arenas do país.',
+            'touradas.jpg',
+          )
+        "
+      >
+        As touradas fazem parte da tradição em algumas regiões, embora
+        controversas hoje.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'La Tomatina',
+            'A maior guerra de comida do mundo acontece anualmente em Buñol.',
+            'latomatina.jpg',
+          )
+        "
+      >
+        A La Tomatina é uma famosa festa onde milhares participam de uma guerra
+        de tomates.
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'San Fermín',
+            'A adrenalina de correr com touros pelas ruas de Pamplona.',
+            'tourosempamplona.jpg',
+          )
+        "
+      >
+        San Fermín é conhecida pela corrida de touros pelas ruas, uma tradição
+        intensa.
+      </div>
+
+      <h2>Localização</h2>
+      <div class="mapa-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2500000!2d-3.70379!3d40.416775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbr"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <section id="cidades">
+      <h2>Cidades Principais</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Barcelona',
+              'A cidade da arquitetura modernista e praias.',
+              'barcelona.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/barcelona.jpg" /></div>
+          <div class="info-bar">Barcelona</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Madrid',
+              'A capital real, cheia de arte e história.',
+              'madrid.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/madrid.jpg" /></div>
+          <div class="info-bar">Madrid</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Valência',
+              'A cidade das artes, das ciências e da paella.',
+              'valencia.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/valencia.jpg" /></div>
+          <div class="info-bar">Valência</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Ilhas Baleares',
+              'Ibiza e Mallorca: o paraíso do Mediterrâneo.',
+              'ibiza.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/ibiza.jpg" /></div>
+          <div class="info-bar">Ilhas Baleares</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Ilhas Canárias',
+              'Belezas vulcânicas em pleno oceano.',
+              'ilhascanarias.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/ilhascanarias.jpg" /></div>
+          <div class="info-bar">Ilhas Canárias</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Toledo',
+              'A cidade medieval das três culturas.',
+              'toledo.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/toledo.jpg" /></div>
+          <div class="info-bar">Toledo</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="turisticos">
+      <h2>Pontos Turísticos</h2>
+
+      <h2>Barcelona</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Sagrada Família',
+              'Basílica icônica projetada por Gaudí.',
+              'sagradafamilia.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/sagradafamilia.jpg" /></div>
+          <div class="info-bar">Sagrada Família</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Parque Güell',
+              'Parque com mosaicos coloridos e arquitetura única.',
+              'parqueguell.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/parqueguell.jpg" /></div>
+          <div class="info-bar">Parque Güell</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Las Ramblas',
+              'A avenida mais famosa da cidade.',
+              'lasramblas.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/lasramblas.jpg" /></div>
+          <div class="info-bar">Las Ramblas</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Bairro Gótico',
+              'Centro histórico com ruas medievais.',
+              'bairrogotico.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/bairrogotico.jpg" /></div>
+          <div class="info-bar">Bairro Gótico</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal('Casa Batlló', 'Obra famosa de Gaudí.', 'casabastllo.jpg')
+          "
+        >
+          <div class="img-box"><img src="Images/casabastllo.jpg" /></div>
+          <div class="info-bar">Casa Batlló</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Catedral de Barcelona',
+              'Catedral gótica no centro da cidade.',
+              'catedralbarcelona.avif',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/catedralbarcelona.avif" /></div>
+          <div class="info-bar">Catedral de Barcelona</div>
+        </div>
+      </div>
+
+      <h2>Madrid</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Museu do Prado',
+              'Museu com obras clássicas importantes.',
+              'museudoprado.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/museudoprado.jpg" /></div>
+          <div class="info-bar">Museu do Prado</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Palácio Real',
+              'Residência oficial da monarquia.',
+              'palacioreal.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/palacioreal.jpg" /></div>
+          <div class="info-bar">Palácio Real</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Parque do Retiro',
+              'Parque urbano muito visitado.',
+              'parquedoretiro.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/parquedoretiro.jpg" /></div>
+          <div class="info-bar">Parque do Retiro</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Plaza Mayor',
+              'Praça histórica de Madrid.',
+              'plazamayor.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/plazamayor.jpg" /></div>
+          <div class="info-bar">Plaza Mayor</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Gran Vía',
+              'Avenida principal com lojas e teatros.',
+              'grandevia.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/grandevia.jpg" /></div>
+          <div class="info-bar">Gran Vía</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Museu Reina Sofia',
+              'Museu de arte moderna.',
+              'museureinasofia.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/museureinasofia.jpg" /></div>
+          <div class="info-bar">Museu Reina Sofia</div>
+        </div>
+      </div>
+
+      <h2>Valência</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Cidade das Artes e Ciências',
+              'Complexo moderno e futurista.',
+              'cidadedasartes.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/cidadedasartes.jpg" /></div>
+          <div class="info-bar">Cidade das Artes e Ciências</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Centro Histórico de Valência',
+              'Região antiga cheia de cultura.',
+              'centrohistoricovalencia.jpg',
+            )
+          "
+        >
+          <div class="img-box">
+            <img src="Images/centrohistoricovalencia.jpg" />
+          </div>
+          <div class="info-bar">Centro Histórico</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Praia Malvarrosa',
+              'Praia urbana popular.',
+              'praiamalvarrosa.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/praiamalvarrosa.jpg" /></div>
+          <div class="info-bar">Praia Malvarrosa</div>
+        </div>
+      </div>
+
+      <h2>Ibiza (Ilhas Baleares)</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Dalt Vila',
+              'Centro histórico fortificado.',
+              'daltvila.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/daltvila.jpg" /></div>
+          <div class="info-bar">Dalt Vila</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Playa d\'en Bossa',
+              'Praia famosa com festas.',
+              'playadenbossa.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/playadenbossa.jpg" /></div>
+          <div class="info-bar">Playa d'en Bossa</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Ushuaïa Ibiza',
+              'Clube mundialmente famoso.',
+              'ushuaia.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/ushuaia.jpg" /></div>
+          <div class="info-bar">Ushuaïa Ibiza</div>
+        </div>
+      </div>
+
+      <h2>Ilhas Canárias</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Monte Teide',
+              'Vulcão mais alto da Espanha.',
+              'monteteide.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/monteteide.jpg" /></div>
+          <div class="info-bar">Monte Teide</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Dunas de Maspalomas',
+              'Dunas impressionantes.',
+              'dunasmaspalomas.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/dunasmaspalomas.jpg" /></div>
+          <div class="info-bar">Dunas de Maspalomas</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Praias Vulcânicas',
+              'Praias de areia escura.',
+              'praiavulcanica.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/praiavulcanica.jpg" /></div>
+          <div class="info-bar">Praias Vulcânicas</div>
+        </div>
+      </div>
+
+      <h2>Toledo</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Catedral de Toledo',
+              'Catedral gótica histórica.',
+              'catedraldetoledo.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/catedraldetoledo.jpg" /></div>
+          <div class="info-bar">Catedral de Toledo</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Alcázar de Toledo',
+              'Fortaleza com grande importância histórica.',
+              'alcazardetoledo.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/alcazardetoledo.jpg" /></div>
+          <div class="info-bar">Alcázar de Toledo</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Centro Histórico de Toledo',
+              'Cidade medieval preservada.',
+              'centrohistoricotoledo.jpg',
+            )
+          "
+        >
+          <div class="img-box">
+            <img src="Images/centrohistoricotoledo.jpg" />
+          </div>
+          <div class="info-bar">Centro Histórico</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="festas">
+      <h2>Festas e tradições</h2>
+
+      <h2>Barcelona</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'La Mercè',
+              'Principal festa de Barcelona com shows, fogos e eventos culturais.',
+              'lamerce.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/lamerce.jpg" /></div>
+          <div class="info-bar">La Mercè</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Sant Jordi',
+              'Dia em que livros e rosas são trocados como símbolo de amor e cultura.',
+              'santjordi.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/santjordi.jpg" /></div>
+          <div class="info-bar">Sant Jordi</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Castellers',
+              'Tradição catalã de construção de torres humanas.',
+              'castellers.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/castellers.jpg" /></div>
+          <div class="info-bar">Castellers</div>
+        </div>
+      </div>
+
+      <h2>Madrid</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'San Isidro',
+              'Festa em homenagem ao padroeiro de Madrid com música e comidas típicas.',
+              'sanisidro.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/sanisidro.jpg" /></div>
+          <div class="info-bar">San Isidro</div>
+        </div>
+      </div>
+
+      <h2>Valência</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Las Fallas',
+              'Famosa festa com esculturas gigantes que são queimadas.',
+              'lasfallas.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/lasfallas.jpg" /></div>
+          <div class="info-bar">Las Fallas</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'La Mascletà',
+              'Espetáculo diário de fogos com foco no som e na vibração.',
+              'lasmascleta.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/lasmascleta.jpg" /></div>
+          <div class="info-bar">La Mascletà</div>
+        </div>
+      </div>
+
+      <h2>Ibiza (Ilhas Baleares)</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Festivais de Música Eletrônica',
+              'Ibiza é mundialmente famosa por festas com DJs internacionais.',
+              'festivalushuaia.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/festivalushuaia.jpg" /></div>
+          <div class="info-bar">Festivais Eletrônicos</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Festas Tradicionais',
+              'Procissões e celebrações locais com música e cultura típica.',
+              'festastradicionaisibiza.jpg',
+            )
+          "
+        >
+          <div class="img-box">
+            <img src="Images/festastradicionaisibiza.jpg" />
+          </div>
+          <div class="info-bar">Festas Tradicionais</div>
+        </div>
+      </div>
+
+      <h2>Ilhas Canárias</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Carnaval de Tenerife',
+              'Um dos maiores carnavais do mundo, com desfiles e fantasias.',
+              'carnavaldetenerife.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/carnavaldetenerife.jpg" /></div>
+          <div class="info-bar">Carnaval de Tenerife</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Fiesta de La Rama',
+              'Festa tradicional com danças e ramos levados até o mar.',
+              'larama.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/larama.jpg" /></div>
+          <div class="info-bar">Fiesta de La Rama</div>
+        </div>
+      </div>
+
+      <h2>Toledo</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Semana Santa de Toledo',
+              'Procissões religiosas tradicionais pelas ruas históricas.',
+              'semanasantatoledo.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/semanasantatoledo.jpg" /></div>
+          <div class="info-bar">Semana Santa</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Corpus Christi',
+              'Uma das celebrações religiosas mais importantes da cidade.',
+              'corpuschristitoledo.jpg',
+            )
+          "
+        >
+          <div class="img-box">
+            <img src="Images/corpuschristitoledo.jpg" />
+          </div>
+          <div class="info-bar">Corpus Christi</div>
+        </div>
+      </div>
+      <h2>Músicas</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              '•	Entre dos Aguas – Paco de Lucia',
+              'Entre dos Aguas é uma peça instrumental de flamenco que mistura técnica virtuosa de violão com influências de jazz e música latina.',
+              'youtube:lXKxmqV86OA',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/entreaguas.jpg" /></div>
+          <div class="info-bar">Entre dos Aguas – Paco de Lucia</div>
+        </div>
+
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Volando Voy – Camarón de la Isla',
+              'Volando Voy é uma canção emblemática do flamenco, interpretada por Camarón de la Isla.',
+              'youtube:7lOEsFE_iPk',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/volando.jpg" /></div>
+          <div class="info-bar">Volando Voy – Camarón de la Isla</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cardapio">
+      <h2>Gastronomia Completa</h2>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Paella',
+            'O prato de arroz mais famoso da Espanha.',
+            'paella.jpg',
+          )
+        "
+      >
+        Paella
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Tortilla Española',
+            'Clássica omelete de batata.',
+            'tortillarspanola.jpg',
+          )
+        "
+      >
+        Tortilla Española
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Churros',
+            'Servidos com chocolate quente denso.',
+            'churros.jpg',
+          )
+        "
+      >
+        Churros
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Jamón Ibérico',
+            'O presunto curado mais nobre do mundo.',
+            'jamomiberico.jfif',
+          )
+        "
+      >
+        Jamón Ibérico
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Gazpacho',
+            'Sopa fria de tomate refrescante.',
+            'gazpacho.jfif',
+          )
+        "
+      >
+        Gazpacho
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Croquetas',
+            'Bolinnhos cremosos irresistíveis.',
+            'croquetas.jfif',
+          )
+        "
+      >
+        Croquetas
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Patatas Bravas',
+            'Batatas fritas com molho picante.',
+            'patatasbravas.jpg',
+          )
+        "
+      >
+        Patatas Bravas
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Pulpo a la Gallega',
+            'Polvo cozido com páprica e azeite.',
+            'pulpoalagallega.jpg',
+          )
+        "
+      >
+        Pulpo a la Gallega
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Fabada Asturiana',
+            'Ensopado rico de feijão branco.',
+            'fabadaasturiana.jpg',
+          )
+        "
+      >
+        Fabada Asturiana
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Crema Catalana',
+            'Sobremesa com crosta de açúcar queimado.',
+            'cremacatalana.jpg',
+          )
+        "
+      >
+        Crema Catalana
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal('Pisto', 'O ratatouille espanhol com legumes.', 'pisto.jpg')
+        "
+      >
+        Pisto
+      </div>
+      <div
+        class="card-texto"
+        onclick="
+          openModal(
+            'Empanadas',
+            'Massas recheadas assadas tradicionais.',
+            'empanadas.jpg',
+          )
+        "
+      >
+        Empanadas
+      </div>
+    </section>
+
+    <div id="meuModal" class="modal" onclick="closeModal()">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <div class="modal-card" onclick="event.stopPropagation()">
+        <!-- Imagem (padrão) -->
+        <img id="imgModal" src="" />
+
+        <!-- Vídeo local (mp4/webm) -->
+        <video
+          id="videoModal"
+          controls
+          style="display: none; width: 100%; height: 300px; object-fit: cover"
+        >
+          <source id="videoSrcModal" src="" type="video/mp4" />
+        </video>
+
+        <!-- Vídeo YouTube embed -->
+        <iframe
+          id="youtubeModal"
+          src=""
+          style="display: none; width: 100%; height: 300px; border: 0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          allowfullscreen
+        ></iframe>
+
+        <div class="modal-info">
+          <h3 id="tituloModal"></h3>
+          <p id="descModal"></p>
+        </div>
+      </div>
+    </div>
+    <section id="personalidades">
+      <h2>Personalidades</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Salvador Dali',
+              ' Salvador Dalí foi um importante pintor e escritor espanhol do século XX, conhecido por suas obras surrealistas com imagens estranhas e inspiradas em sonhos. Era excêntrico e teatral, com estilo chamativo dizia que suas pinturas eram fotografias de sonhos e se inspirava em Diego Velázquez.',
+              'salvadordali.webp',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/salvadordali.webp" /></div>
+          <div class="info-bar">Salvador Dali</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Fernando Alonso',
+              'Fernando Alonso é um piloto espanhol bicampeão mundial de Fórmula 1 (2005 e 2006), conhecido como El Nano. Destaca-se pela alta velocidade, inteligência tática, pilotagem precisa e grande determinação para vencer.',
+              'fernandoalonso.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/fernandoalonso.jpg" /></div>
+          <div class="info-bar">Fernando Alonso</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Penélope Cruz',
+              'Rafael Nadal é um tenista espanhol nascido em Manacor (Mallorca) em 3 de junho de 1986, considerado um dos maiores da história do esporte.',
+              'penelopecurz.webp',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/penelopecurz.webp" /></div>
+          <div class="info-bar">Penélope Cruz</div>
+        </div>
+        <br />
+      </div>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Rafael Nadal',
+              'Rafael Nadal é um tenista espanhol nascido em Manacor (Mallorca) em 1986 e amplamente reconhecido como um dos maiores da história do esporte.',
+              'rafaelnadal.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/rafaelnadal.jpg" /></div>
+          <div class="info-bar">Rafael Nadal</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Antonio Banderas',
+              'Antonio Banderas é um ator, diretor e produtor espanhol nascido em Málaga em 1960, com carreira também em música, dança e dublagem. É amplamente reconhecido como um dos atores espanhóis mais famosos do cinema mundial.',
+              'antoniobanderas.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/antoniobanderas.jpg" /></div>
+          <div class="info-bar">Antonio Banderas</div>
+        </div>
+      </div>
+      <h2>Filósofos e Sociólogos</h2>
+      <div class="grid-cidades">
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'José Ortega y Gasset',
+              'José Ortega y Gasset foi um filósofo, ensaísta e jornalista espanhol do século XX, nascido em Madrid em 1883. Sua obra combinou filosofia e atuação no jornalismo, com forte influência do neokantismo e foco na realidade social e política da Espanha.',
+              'joseortegaygasset.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/joseortegaygasset.jpg" /></div>
+          <div class="info-bar">José Ortega y Gasset</div>
+        </div>
+        <div
+          class="card-cidade"
+          onclick="
+            openModal(
+              'Manuel Castells',
+              'Manuel Castells é um sociólogo e historiador espanhol, nascido em 1942. É conhecido por sua análise da sociedade da informação e da globalização.',
+              'manuelcastells.jpg',
+            )
+          "
+        >
+          <div class="img-box"><img src="Images/manuelcastells.jpg" /></div>
+          <div class="info-bar">Manuel Castells</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <h3>Espanha</h3>
+      <div class="footer-btns">
+        <button type="button" onclick="changeTab('historia')">História</button>
+        <button type="button" onclick="changeTab('cidades')">Cidades</button>
+        <button type="button" onclick="changeTab('turisticos')">
+          Pontos turísticos
+        </button>
+        <button type="button" onclick="changeTab('festas')">
+          Festas e tradições
+        </button>
+        <button type="button" onclick="changeTab('cardapio')">
+          Gastronomia
+        </button>
+        <button type="button" onclick="changeTab('personalidades')">
+          Personalidades
+        </button>
+      </div>
+      <p>
+        © 2026 - ETEC Raposo Tavares Atividade de Espanhol | Desenvolvido por
+        Gabriel Garcia, Thiago Cavalcante, Felipe Rocha, Gabriel Velasquez,
+        Otavio Marconi e Vitor Moraes.
+      </p>
+    </footer>
+  </body>
+</html>

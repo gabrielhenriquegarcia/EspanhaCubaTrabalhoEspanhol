@@ -1,0 +1,134 @@
+:root {
+  --vermelho: #aa151b;
+  --azul: #002a8f;
+  --amarelo: #f1bf00;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow-x: hidden;
+  height: 100vh;
+  flex-direction: row;
+}
+
+.split-side {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.split-side::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.5s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.split-side.semfiltro::after {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.espanha {
+  background-image: url("praiaespanha.avif");
+}
+.cuba {
+  background-image: url("praiacuba.avif");
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  padding: 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 32px;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+  text-align: center;
+  z-index: 2;
+  outline: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn1 {
+  background: var(--vermelho);
+}
+.btn2 {
+  background: var(--vermelho);
+}
+
+.btn1:hover {
+  background: var(--amarelo);
+  transform: scale(1.05);
+}
+.btn2:hover {
+  background: var(--azul);
+  transform: scale(1.05);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.flag-left,
+.flag-right {
+  position: absolute;
+  top: 40px;
+  width: 120px;
+  opacity: 0.7;
+  filter: grayscale(0.3);
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.flag-left {
+  left: 40px;
+}
+.flag-right {
+  right: 40px;
+}
+
+.split-side:hover .flag-left,
+.split-side:hover .flag-right {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .split-side {
+    min-height: 50vh;
+    height: auto;
+    padding: 80px 0;
+  }
+  .btn {
+    width: 200px;
+    padding: 20px;
+    font-size: 24px;
+  }
+}
